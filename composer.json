@@ -1,0 +1,27 @@
+{
+    "name": "antlion/element-carousel",
+    "description": "Elemental Carousel Block",
+    "license": "BSD-3-Clause",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "elemental",
+        "blocks",
+        "carousel"
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Antlion\\ElementCarousel\\": "src/"
+        }
+    },
+    "config": {
+        "process-timeout": 600
+    },
+     "extra": {
+        "expose": [
+            "client"
+        ]
+    }
+}
