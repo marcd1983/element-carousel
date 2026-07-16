@@ -7,7 +7,9 @@
   <div class="swiper" id="carousel-{$ID}" data-element-carousel>
     <div class="swiper-wrapper">
       <% loop $Slides %>
-        <% include ElementCarouselSlide %>
+        <div class="element-carousel__slide swiper-slide">
+          <% include ElementCarouselSlide CardAppearance=$Up.CardAppearance %>
+        </div>
       <% end_loop %>
     </div>
 
