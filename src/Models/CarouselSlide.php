@@ -54,11 +54,12 @@ class CarouselSlide extends DataObject
     
     $fields = parent::getCMSFields();
     $fields->removeByName([
-      'CarouselID', 
+      'CarouselID',
       'SortOrder',
-      'LinkID',
-      'Link'
-      
+      'Title',
+      'Content',
+      'Image',
+      'Links',
     ]);
     $fields->addFieldsToTab('Root.Main', [
       TextField::create('Title', 'Title')->setMaxLength(255),
