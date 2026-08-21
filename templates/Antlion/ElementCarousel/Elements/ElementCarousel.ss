@@ -1,3 +1,4 @@
+<% cached $ID, $LastEdited, $Slides.Count, $Slides.Max('LastEdited') %>
 <% if $Title && $ShowTitle %>
     <% with $HeadingTag %>
           <{$Me} class="element-title">$Up.Title.XML</{$Me}>
@@ -21,6 +22,7 @@
     <% if $Scrollbar %><div class="swiper-scrollbar"></div><% end_if %>
   </div>
 </div>
+<% end_cached %>
 <%-- <% require javascript('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js') %> --%>
 <%-- <% require javascript('elements/element-carousel:client/js/swiper-bundle.min.js') %> --%>
 
