@@ -27,7 +27,7 @@
       <% if $Links.Exists %>
         <div class="button-group">
           <% loop $Links %>
-          <a class="button $CssClass" href="$URL" <% if $OpenInNew %>target="_blank" rel="noopener noreferrer"<% end_if %>>$Title.XML</a>
+                      <a class="button $CssClass $ExtraClass"<% if $ModalTarget %> data-remodal-target="$ModalTarget"<% else %> href="$URL"<% end_if %><% if $OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$Title.XML</a>
           <% end_loop %>
         </div>
       <% end_if %>    
