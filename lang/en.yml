@@ -1,0 +1,37 @@
+en:
+  Antlion\ElementCarousel\Elements\ElementCarousel:
+    BlockType: Carousel
+    PLURALNAME: carousels
+    PLURALS:
+      one: 'A carousel'
+      other: '{count} carousels'
+    SINGULARNAME: carousel
+    db_Autoplay: Autoplay
+    db_AutoplayDelay: 'Autoplay delay'
+    db_CardAppearance: 'Card appearance'
+    db_CenteredSlides: 'Centered slides'
+    db_FreeMode: 'Free mode'
+    db_Lazy: Lazy
+    db_Loop: Loop
+    db_MouseWheel: 'Mouse wheel'
+    db_Navigation: Navigation
+    db_Pagination: Pagination
+    db_Scrollbar: Scrollbar
+    db_SlidesPerView: 'Slides per view'
+    db_SlidesPerViewMd: 'Slides per view md'
+    db_SlidesPerViewSm: 'Slides per view sm'
+    db_SpaceBetween: 'Space between'
+    db_Speed: Speed
+    has_many_Slides: Slides
+  Antlion\ElementCarousel\Models\CarouselSlide:
+    PLURALNAME: 'carousel slides'
+    PLURALS:
+      one: 'A carousel slide'
+      other: '{count} carousel slides'
+    SINGULARNAME: 'carousel slide'
+    db_Content: Content
+    db_SortOrder: 'Sort order'
+    db_Title: Title
+    has_many_Links: Links
+    has_one_Carousel: Carousel
+    has_one_Image: Image

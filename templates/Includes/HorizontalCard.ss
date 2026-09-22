@@ -4,7 +4,7 @@
             <% if $Image %>
                 <div class="zoom-container">
                     <% if ElementLink %><a href="{$ElementLink.URL}" class="card-img-link" <% if $OpenInNew %>target="_blank"<% end_if %>><% end_if %>
-                        <img src="$Image.FocusFill(600,600).URL" class="zoom" alt="$Image.Title.ATT" loading="lazy">
+                        <% include ResponsiveImage Image=$Image.FocusFill(600,600), Alt=$Image.Title, CSSClass="zoom" %>
                     <% if ElementLink %></a><% end_if %>
                 </div>
             <% end_if %>

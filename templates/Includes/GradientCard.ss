@@ -1,7 +1,7 @@
 
 <a class="card gradient-card $AlignmentClass" style="color:{$TextColor};<% if $BackgroundColor %>background-color:#{$BackgroundColor};<% end_if %>" <% if $Links.Exists %>href="{$Links.First.URL}" <% if $Links.First.OpenInNew %>target="_blank" rel="noopener noreferrer"<% end_if %><% end_if %>>
     <div aria-hidden="true" class="gradient-card-bg">
-        <img alt="$Image.Title.ATT" src="$Image.URL" />
+        <% include ResponsiveImage Image=$Image, Alt=$Image.Title %>
         <div class="gradient-card-gradient"></div>
     </div>
     <div class="card-section gradient-card-section">

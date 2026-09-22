@@ -1,7 +1,7 @@
 <a class="card hover-card $AlignmentClass" style="color:{$TextColor};<% if $BackgroundColor %>background-color:#{$BackgroundColor};<% end_if %>" <% if $Links.Exists %>href="{$Links.First.URL}" <% if $Links.First.OpenInNew %>target="_blank" rel="noopener noreferrer"<% end_if %><% end_if %>>
     <% if $Image %>
         <div class="zoom">
-            <img src="$Image.FocusFill(600,600).URL" alt="$Image.Title.ATT" loading="lazy">
+            <% include ResponsiveImage Image=$Image.FocusFill(600,600), Alt=$Image.Title %>
         </div>
     <% end_if %>
 

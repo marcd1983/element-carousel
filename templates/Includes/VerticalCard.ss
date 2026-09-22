@@ -2,6 +2,10 @@
   <% if $Image %>
     <% if $Top.Lazy %>
       <picture>
+        <% with $Image.Fill(600,600).Convert('webp') %>
+        <source media="(min-width:1024px)" type="image/webp" data-srcset="$URL">
+        <source media="(max-width:1023px)" type="image/webp" data-srcset="$URL">
+        <% end_with %>
         <source media="(min-width:1024px)" data-srcset="<% if function_exists('FocusFill') %>$Image.FocusFill(600,600).URL<% else %>$Image.Fill(600,600).URL<% end_if %>">
         <source media="(max-width:1023px)" data-srcset="<% if function_exists('FocusFill') %>$Image.FocusFill(600,600).URL<% else %>$Image.Fill(600,600).URL<% end_if %>">
         <img class="swiper-lazy"
@@ -12,6 +16,10 @@
       <div class="swiper-lazy-preloader"></div>
     <% else %>
       <picture>
+        <% with $Image.Fill(600,600).Convert('webp') %>
+        <source media="(min-width:1024px)" type="image/webp" srcset="$URL">
+        <source media="(max-width:1023px)" type="image/webp" srcset="$URL">
+        <% end_with %>
         <source media="(min-width:1024px)" srcset="<% if function_exists('FocusFill') %>$Image.FocusFill(600,600).URL<% else %>$Image.Fill(600,600).URL<% end_if %>">
         <source media="(max-width:1023px)" srcset="<% if function_exists('FocusFill') %>$Image.FocusFill(600,600).URL<% else %>$Image.Fill(600,600).URL<% end_if %>">
         <img src="<% if function_exists('FocusFill') %>$Image.FocusFill(600,600).URL<% else %>$Image.ScaleMaxWidth(600).URL<% end_if %>"
